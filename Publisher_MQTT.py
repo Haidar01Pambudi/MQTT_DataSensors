@@ -17,7 +17,7 @@ def DB_Connections():
 def Check_Table():
     try:
         connect = DB_Connections()
-        print("\n\nDatabase '", DBname, "' was Successfull to Connect...")
+        print("\n\nDatabase '", DBname, "' was Successful to Connect...")
         MyScheme = """
         CREATE TABLE IF NOT EXISTS LDR_Sensor(
         id integer primary key autoincrement,
