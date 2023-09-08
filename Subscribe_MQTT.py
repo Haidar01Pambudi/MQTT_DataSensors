@@ -4,8 +4,8 @@ import paho.mqtt.client as mqtt
 import datetime
 
 # Inisialisasi variabel
-DBname = "[].db"
-broker_address = "202.46.3.87"
+DBname = "[DATABASE_NAME].db"
+broker_address = "[IP_TARGET]"
 client = mqtt.Client("Gateway")
 client.connect(broker_address)
 
@@ -18,7 +18,7 @@ def DB_Connections():
 def Check_Table():
     try:
         connect = DB_Connections()
-        print("\n\nDatabase '", DBname, "' was Successfull to Connect...")
+        print("\n\nDatabase '", DBname, "' was Successful to Connect...")
         MyScheme = """
         create table if not exists LDR_Sensor(
         id integer primary key autoincrement,
@@ -48,6 +48,6 @@ def on_message(client, userdata, message):
 
 # Proses pengiriman data dari publisher ke subsciber
 while True:
-    client.subscribe("ldr/cond")
+    client.subscribe("[MQTT_TOPIC]")
     client.on_message = on_message
     client.loop_forever()
