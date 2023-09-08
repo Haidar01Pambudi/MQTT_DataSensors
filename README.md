@@ -6,3 +6,9 @@ This code used for transmit data sensors to server or other devices that needs d
 * Paho MQTT, to provides a client class which enable applications to connect to an MQTT broker to publish messages, and to subscribe to topics and receive published messages, for source [link](https://pypi.org/project/paho-mqtt/). Install using command `pip install paho-mqtt`
 * Python Serial, to built connection from Arduino to our devices, we used python serial for detected Arduino interface. Install using command `pip install pyserial`
 
+## Explanation
+* `[IP_TARGET]`, 
+* `[ARDUINO_PORT]`,
+* `[DATABASE_NAME]`,
+* `[TARGET_NAME]`,
+* `[MQTT_TOPIC]`,
