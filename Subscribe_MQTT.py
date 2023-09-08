@@ -4,7 +4,7 @@ import paho.mqtt.client as mqtt
 import datetime
 
 # Inisialisasi variabel
-DBname = "data_sensor.db"
+DBname = "[].db"
 broker_address = "202.46.3.87"
 client = mqtt.Client("Gateway")
 client.connect(broker_address)
